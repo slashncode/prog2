@@ -26,7 +26,7 @@ public class TemperatureLightLevelApplication {
 
     public TemperatureLightLevelApplication() {
         this.running = true;
-        this.temperature = generateRandomFloat(13.00f, 20.00f);
+        this.temperature = generateRandomFloat(13.00f, 24.00f);
         this.lightLevel = generateRandomFloat(0.00f, 100.00f);
     }
 
