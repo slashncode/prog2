@@ -32,7 +32,7 @@ public class TemperatureLightLevelApplication {
 
     public void start() {
         float temperatureRange = 1.00f;
-        float lightLevelRange = 30.00f;
+        float lightLevelRange = 4.00f;
 
         MqttConnectOptions options = new MqttConnectOptions();
         options.setAutomaticReconnect(true);
