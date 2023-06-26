@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 
+import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -44,6 +45,15 @@ public class MitteilungenActivity extends BaseActivity {
                         CardView cardView = createCard(cardBundle, false);
                         cardContainer.addView(cardView);
                     }
+                }
+
+                BadgeDrawable badge = bottomNavigationView.getOrCreateBadge(R.id.menu_mitteilungen);
+                badge.isVisible();
+                if (cardBundles.size() == 1) {
+                    badge.setNumber(1);
+                }
+                if (cardBundles.size() == 2) {
+                    badge.setNumber(2);
                 }
             }
         }

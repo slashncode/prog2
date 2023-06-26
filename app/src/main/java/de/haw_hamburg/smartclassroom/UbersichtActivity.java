@@ -356,16 +356,16 @@ public class UbersichtActivity extends BaseActivity implements View.OnClickListe
                     if (Float.parseFloat(value) <= 23.00) {
                         BadgeDrawable badge = bottomNavigationView.getOrCreateBadge(R.id.menu_mitteilungen);
                         badge.isVisible();
-                        badge.setNumber(1);
-                        if (badge.getNumber() >= 1) {
-                            badge.setNumber(2);
-                        } else {
-                            badge.setNumber(1);
-                        }
                         cardBundle1.putString("headline", "Heizung 1 anschalten?");
                         cardBundle1.putString("subhead", "Es fröstelt, mach doch mal die Heizung an!");
                         if (!cardBundles.contains(cardBundle1)) {
                             cardBundles.add(cardBundle1);
+                        }
+                        if (cardBundles.size() == 1) {
+                            badge.setNumber(1);
+                        }
+                        if (cardBundles.size() == 2) {
+                            badge.setNumber(2);
                         }
                     } else {
                         BadgeDrawable badge = bottomNavigationView.getOrCreateBadge(R.id.menu_mitteilungen);
@@ -382,15 +382,17 @@ public class UbersichtActivity extends BaseActivity implements View.OnClickListe
                         lightIcon.setImageResource(R.drawable.icon_dark);
                         BadgeDrawable badge = bottomNavigationView.getOrCreateBadge(R.id.menu_mitteilungen);
                         badge.isVisible();
-                        if (badge.getNumber() >= 1) {
-                            badge.setNumber(2);
-                        } else {
-                            badge.setNumber(1);
-                        }
+                        badge.setNumber(1);
                         cardBundle2.putString("headline", "Licht 1 anschalten?");
                         cardBundle2.putString("subhead", "Es ist zu dunkel, mach doch mal Licht an!");
                         if (!cardBundles.contains(cardBundle2)) {
                             cardBundles.add(cardBundle2);
+                        }
+                        if (cardBundles.size() == 1) {
+                            badge.setNumber(1);
+                        }
+                        if (cardBundles.size() == 2) {
+                            badge.setNumber(2);
                         }
                     } else {
                         lightIcon.setImageResource(R.drawable.icon_light);
