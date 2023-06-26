@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UbersichtActivity">
+
+    <!-- Top bar layout -->
+    <LinearLayout
+        android:id="@+id/topBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="32dp"
+        android:paddingRight="16dp">
+
+        <!-- Text: "Smart Classroom" on the left -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smart Classroom"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Text: "19°C" on the right -->
+
+        <TextView
+            android:id="@+id/temperatureText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="\?\?°C"
+            android:textAlignment="viewEnd"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Icon -->
+    </LinearLayout>
+
+    <!-- Segmented buttons -->
+    <LinearLayout
+        android:id="@+id/iconLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBarLayout"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iconImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/segmentedButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iconLayout"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/buttonRollos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_bg_left"
+            android:checkable="false"
+            android:clickable="false"
+            android:drawableStart="@drawable/ic_baseline_home_24"
+            android:enabled="false"
+            android:text="Rollos"
+            app:strokeColor="#000000"
+            app:strokeWidth="5px" />
+
+        <Button
+            android:id="@+id/buttonLicht"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_middle"
+            android:checkable="true"
+            android:drawableStart="@drawable/ic_baseline_home_24"
+            android:enabled="true"
+            android:text="Licht"
+            app:rippleColor="#00FFFFFF"
+            app:toggleCheckedStateOnClick="true" />
+
+        <Button
+            android:id="@+id/buttonHeizung"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_bg_right"
+            android:checkable="true"
+            android:drawableStart="@drawable/ic_baseline_home_24"
+            android:enabled="true"
+            android:text="Heizung"
+            app:toggleCheckedStateOnClick="true" />
+
+    </LinearLayout>
+
+    <!-- Scrollable segment with cards -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/segmentedButtonsLayout">
+
+        <LinearLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bottomNavigationView"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="80dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

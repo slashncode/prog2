@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="menu_ubersicht" type="id" />
+    <item name="menu_mitteilungen" type="id" />
+    <item name="bottomNavigationView" type="id" />
+    <item name="cardHeadlineRollos1" type="id"/>
+    <item name="cardHeadlineRollos2" type="id"/>
+    <item name="cardHeadlineRollos3" type="id"/>
+    <item name="cardHeadlineRollos4" type="id"/>
+    <item name="cardHeadlineLicht1" type="id"/>
+    <item name="cardHeadlineLicht2" type="id"/>
+    <item name="cardHeadlineLicht3" type="id"/>
+    <item name="cardHeadlineLicht4" type="id"/>
+    <item name="cardHeadlineHeizung1" type="id"/>
+    <item name="cardHeadlineHeizung2" type="id"/>
+    <item name="cardHeadlineHeizung3" type="id"/>
+    <item name="cardHeadlineHeizung4" type="id"/>
+</resources>

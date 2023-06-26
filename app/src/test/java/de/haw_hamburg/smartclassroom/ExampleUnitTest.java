@@ -1,4 +1,4 @@
-package de.haw_hamburg.temperatureapp;
+package de.haw_hamburg.smartclassroom;
 
 import org.junit.Test;
 

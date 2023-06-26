@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MitteilungenActivity">
+
+    <!-- Headline: "Mitteilungen" -->
+    <TextView
+        android:id="@+id/headlineText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="32dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:text="Mitteilungen"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <!-- Dividing line -->
+    <View
+        android:id="@+id/dividingLine"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/headlineText"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Dialog card -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dividingLine">
+
+        <LinearLayout
+            android:id="@+id/mitteilungenContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>
